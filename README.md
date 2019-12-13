@@ -10,7 +10,7 @@ Pulls data from Radio Thermostat local API and pushes to MQTT every minute.
 version: '3.2'
 services:
     thermostat_mqtt:
-        container_name: thermostat_mqtt
+        container_name: aneisch/thermostat_mqtt_docker:latest
         image: thermostat_test
         environment:
           - MQTT_SERVER=10.0.1.22
