@@ -15,6 +15,7 @@ services:
         environment:
           - MQTT_SERVER=10.0.1.22
           - MQTT_PORT=1883
-          - THERMOSTAT_IP=10.0.1.29
+          - THERMOSTAT_IP=10.0.0.29
+          - TOPIC=sensor/thermostat
         restart: always
 ```
