@@ -13,8 +13,6 @@ RUN echo '*  *  *  *  *  /usr/bin/thermostat_mqtt.sh' > /etc/crontabs/thermostat
 
 RUN adduser -D thermostat_mqtt
 
-USER thermostat_mqtt
-
 ENV MQTT_SERVER 127.0.0.1
 ENV MQTT_PORT 1883
 ENV TOPIC sensor/thermostat
