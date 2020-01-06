@@ -9,7 +9,10 @@ COPY ./thermostat_mqtt.sh /usr/bin/thermostat_mqtt.sh
 
 RUN chmod +x /usr/bin/thermostat_mqtt.sh
 
-RUN echo '*  *  *  *  *  /usr/bin/thermostat_mqtt.sh' > /etc/crontabs/root
+RUN adduser -D thermostat_mqtt
+USER thermostat_mqtt
+
+RUN echo '*  *  *  *  *  /usr/bin/thermostat_mqtt.sh' > /etc/crontabs/thermostat_mqtt
 
 ENV MQTT_SERVER 127.0.0.1
 ENV MQTT_PORT 1883
