@@ -1,7 +1,8 @@
 FROM alpine:latest
 
 RUN apk add --no-cache --update \
-    mosquitto-clients openssl curl
+    mosquitto-clients openssl curl \
+    bash
 
 COPY ./thermostat_mqtt.sh /usr/bin/thermostat_mqtt.sh
 
