@@ -13,4 +13,5 @@ while true; do
 
   message_fixed=$(echo $message | sed -e 's/t_heat/setpoint/' -e 's/t_cool/setpoint/')
   mosquitto_pub -h $MQTT_SERVER -p $MQTT_PORT -t $TOPIC -m $message_fixed
+  sleep 60
 done
