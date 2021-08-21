@@ -12,7 +12,7 @@ version: '3.2'
 services:
     thermostat_mqtt:
         container_name: thermostat_mqtt
-        image: aneisch/thermostat_mqtt_docker:latest
+        image: ghcr.io/aneisch/thermostat_mqtt_docker:latest
         environment:
           - MQTT_SERVER=10.0.1.22
           - MQTT_PORT=1883
